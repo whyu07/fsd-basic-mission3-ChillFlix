@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chill Register</title>
+    <link rel="shortcut icon" href="mini-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/auth.css">
+</head>
+<body class="body" id="register-body">
+    <main class="container">
+        <div class="header">
+            <img src="../img/mini-logo.png" alt="logo">
+            <img src="../img/logo.png" alt="logo">
+            <div class="h-tittle">
+                <h1>Daftar</h1>
+                <p>Selamat Datang!</p>
+            </div>
+        </div>
+        
+        <form action="form-input">
+            <div class="form-user">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Masukkan username Anda" required>
+            </div>
+            <div class="form-user">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Masukkan password Anda" required>
+            </div>
+            <div class="form-user">
+                <label for="password">Confirm Password </label>
+                <input type="password" id="confirmation-pw" name="confirmation-pw" placeholder="Masukkan kembali password Anda" required>
+            </div>
+            <div class="form-daftar">
+                <p>Sudah punya akun? <a href="../index.html" id="register">Masuk</a></p>
+                <a href="#">Lupa kata sandi</a>
+            </div>
+            <div class="form-action">
+                <button type="submit" class="btn">Daftar</button>
+                <p>Atau</p>
+                <button>
+                    <img src="../img/google.png" alt="google-icon" id="google-icon">
+                     Daftar dengan Google
+                </button>
+            </div>
+
+        </form>
+
+    </main>
+</body>
+</html>
