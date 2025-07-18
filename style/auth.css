@@ -7,14 +7,14 @@
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-image: url('/img/BG.jpg');
+    background-image: url('../img/BG.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 #register-body {
-    background-image: url('./img/bg-regist.jpg');
+    background-image: url('../img/bg-regist.jpg');
 }
 
 .container {

@@ -6,9 +6,130 @@
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-image: url('/img/BG.jpg');
+    background-image: url('../img/BG.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 50px;
+    background: #000000; /* Warna latar belakang solid hitam */
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #E0E0E0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.profile-container {
+    position: relative;
+}
+
+.profile-toggle-checkbox {
+    /* Sembunyikan checkbox-nya dari pandangan */
+    display: none;
+}
+
+.profile-toggle-label {
+    /* Jadikan label sebagai pemicu klik */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 130%;
+    right: 0;
+    background-color: #181A1C;
+    border: 1px solid #3A3B3C;
+    border-radius: 4px;
+    width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.profile-toggle-checkbox:checked ~ .dropdown-menu {
+    display: block;
+}
+.arrow-icon {
+    color: white;
+    margin-left: 8px;
+}
+
+/* Gaya untuk dropdown menu */
+.dropdown-menu {
+    display: none; /* Sembunyikan secara default */
+    position: absolute;
+    top: 130%; /* Posisikan sedikit di bawah ikon profil */
+    right: 0;
+    background-color: #181A1C;
+    border: 1px solid #3A3B3C;
+    border-radius: 4px;
+    width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Kelas 'active' untuk menampilkan menu */
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #E0E0E0;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #3D4142;
+}
+
+.dropdown-menu li a i {
+    width: 16px; /* Memberi ruang yang konsisten untuk ikon */
 }
