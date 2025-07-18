@@ -14,7 +14,7 @@
     background-attachment: fixed;
 }
 #register-body {
-    background-image: url('/img/bg-regist.jpg');
+    background-image: url('./img/bg-regist.jpg');
 }
 
 .container {
