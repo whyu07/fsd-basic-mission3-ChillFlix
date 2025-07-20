@@ -1,4 +1,5 @@
 @import url(./main.css);
+@import url('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
 
 .navbar {
     position: fixed;
@@ -33,10 +34,6 @@
     height: 100%;
 }
 
-.logo-link i {
-    font-size: 28px;
-    color: white;
-}
 
 .nav-links {
     list-style: none;
@@ -144,7 +141,7 @@ body {
     align-items: flex-start;
     gap: 10px;
     padding-left: 50px;
-    background-image: url('../img/BG.jpg'); /* Pastikan path gambar ini benar */
+    background-image: url('../img/bg-awal.png'); /* Pastikan path gambar ini benar */
     background-size: cover;
     background-position: center top;
 }
@@ -210,9 +207,9 @@ body {
 }
 
 
-/* Movie Carousel */
-.carousel,
-.carousel-continue {
+/* Movie container */
+.container,
+.container-continue {
     display: flex;
     flex-direction: column;
     width: 1440px;
@@ -221,13 +218,13 @@ body {
     gap: 32px;
 }
 
-.carousel-title {
+.container-title {
     font-weight: 700;
     font-size: 32px;
     line-height: 110%;
     letter-spacing: 0;
-    text-align: center;
-    margin-bottom: 0; /* Replaced by gap on .carousel */
+    text-align: left;
+    margin-bottom: 0; /* Replaced by gap on .container */
 }
 
 .slider-container {
@@ -261,7 +258,33 @@ h2 {
     margin-bottom: 10px;
 }
 
-.movie-list {
+.swiper {
+      /* Based on: Fixed (1,440px) Width, Hug (512px) Height */
+      width: 1440px;
+      max-width: 100%; /* Ensures responsiveness on smaller screens */
+      height: 512px;
+      margin: 0 auto; /* Let parent container's gap handle vertical spacing */
+      padding: 40px 80px; /* As per your padding values */
+      box-sizing: border-box;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      height: 365px; /* As per "Hug (365px)" */
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      width: 234px; /* As per "Fixed (234px)" */
+      height: 365px; /* As per "Fixed (365px)" */
+      object-fit: cover;
+    }
+.movie-list,
+.movie-list-popular {
     display: flex;
     gap: 28px;
     overflow-x: auto;
@@ -271,18 +294,6 @@ h2 {
     scrollbar-width: none;  /* Firefox */
 }
 
-.movie-list::-webkit-scrollbar {
-    display: none;
-}
-
-.movie-item {
-    flex-shrink: 0; /* Prevent items from shrinking */
-}
-
-.movie-item img {
-    height: 365px;
-    border-radius: 8px;
-}
 
 .nav-button {
     background: none;
@@ -301,4 +312,63 @@ h2 {
 
 .nav-button.right {
     right: 10px;
+}
+
+/* Footer Section */
+.footer {
+    background-color: rgba(24, 26, 28, 1);
+    color: #9D9EA1; /* A soft grey for text */
+}
+
+.footer-container {
+    /* Based on: Fixed (1,440px) Width, Hug (284px) Height, Padding, Border, Gap */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1440px;
+    max-width: 100%;
+    min-height: 284px;
+    margin: 0 auto;
+    padding: 60px 80px;
+    border-top: 1px solid rgba(231, 227, 252, 0.23);
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.footer-logo .logo-icon {
+    font-size: 2rem;
+}
+
+.footer-logo .logo-text {
+    color: #fff;
+    margin: 8px 0;
+}
+
+.footer-genre {
+    display: flex;
+    gap: 48px; /* Gap between genre columns */
+}
+
+.footer-genre h4,
+.footer-help h4 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.footer-genre ul,
+.footer-help ul {
+    list-style: none;
+}
+
+.footer-genre li,
+.footer-help li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-genre li:hover,
+.footer-help li:hover {
+    text-decoration: underline;
 }

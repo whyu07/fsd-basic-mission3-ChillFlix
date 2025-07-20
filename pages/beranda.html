@@ -47,15 +47,15 @@
           When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.
         </p>
         <div class="hero-buttons">
-          <button class="btn btn-play"><i class="fas fa-play"></i> Play</button>
-          <button class="btn btn-info"><i class="fas fa-info-circle"></i> More Info</button>
+          <button class="btn btn-play"><i class="fas fa-play"></i> Mulai</button>
+          <button class="btn btn-info"><i class="fas fa-info-circle"></i>Selengkapnya</button>
         </div>
       </div>
       <div class="hero-fade"></div>
     </section>
 
-    <section class="carousel">
-      <h2 class="carousel-title">Continue Watching</h2>
+    <section class="container">
+      <h2 class="container-title">Continue Watching</h2>
       <div class="slider-container">
     <div class="slider-container">
         <button class="nav-button left">&#10094;</button>
@@ -63,35 +63,128 @@
             <!-- Konten film akan diisi oleh JavaScript -->
         </div>
         <button class="nav-button right">&#10095;</button>
+    </div>
+    </section>
+
+    <section class="container">
+      <h2 class="container-title">Top Rating dan Series Hari Ini</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="../img/rate1-suzume.png"></div>
+          <div class="swiper-slide"><img src="../img/rating/2.png"></div>
+          <div class="swiper-slide"><img src="../img/rating/3.png"></div>
+          <div class="swiper-slide"><img src="../img/rating/4.png"></div>
+          <div class="swiper-slide"><img src="../img/rating/5.png"></div>
+          
+       </div>
+       <div class="swiper-pagination"></div>
       </div>
+    </section>
+
+    <section class="container">
+      <h2 class="container-title">Film Trending</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="../img/trend/1.png"></div>
+          <div class="swiper-slide"><img src="../img/trend/2.png"></div>
+          <div class="swiper-slide"><img src="../img/trend/3.png"></div>
+          <div class="swiper-slide"><img src="../img/trend/4.png"></div>
+          <div class="swiper-slide"><img src="../img/trend/5.png"></div>
+          
+       </div>
+       <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="container-title">Rilis  Baru</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="../img/rilis-new/1.png"></div>
+          <div class="swiper-slide"><img src="../img/rilis-new/2.png"></div>
+          <div class="swiper-slide"><img src="../img/rilis-new/3.png"></div>
+          <div class="swiper-slide"><img src="../img/rilis-new/4.png"></div>
+          <div class="swiper-slide"><img src="../img/rilis-new/5.png"></div>
+          
+          
+       </div>
+       <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "horizontal", 
+      slidesPerView: 3,
+      spaceBetween: 10, 
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+  <footer class="footer">
+  <div class="footer-container">
     
-    
-</div>
+    <!-- Logo dan Hak Cipta -->
+    <div class="footer-logo">
+      <div class="logo-icon"><img src="../img/logo-chill.png" alt=""></div>
+      <p class="copyright">©2023 Chill All Rights Reserved.</p>
+    </div>
 
-    </section>
-
-    <section class="carousel">
-      <h2 class="carousel-title">Popular on ChillFlix</h2>
-      <div class="movie-list">
-        <div class="movie-item"><img src="../img/film.jpg" alt="Movie 6"></div>
-        <div class="movie-item"><img src="../img/film.jpg" alt="Movie 7"></div>
-        <div class="movie-item"><img src="../img/film.jpg" alt="Movie 8"></div>
-        <div class="movie-item"><img src="../img/film.jpg" alt="Movie 9"></div>
-        <div class="movie-item"><img src="../img/film.jpg" alt="Movie 10"></div>
+    <!-- Genre -->
+    <div class="footer-genre">
+      <div class="genre-column">
+        <h4>Genre</h4>
+        <ul>
+          <li>Aksi</li>
+          <li>Anak-anak</li>
+          <li>Anime</li>
+          <li>Britania</li>
+        </ul>
       </div>
-    </section>
-
-     <section class="carousel">
-      <h2 class="carousel-title">Trending Now</h2>
-      <div class="movie-list">
-        <div class="movie-item"><img src="../img/film.jpg" alt="Movie 11"></div>
-        <div class="movie-item"><img src="../img/film.jpg" alt="Movie 12"></div>
-        <div class="movie-item"><img src="../img/film.jpg" alt="Movie 13"></div>
-        <div class="movie-item"><img src="../img/film.jpg" alt="Movie 14"></div>
-        <div class="movie-item"><img src="../img/film.jpg" alt="Movie 15"></div>
+      <div class="genre-column">
+        <ul>
+          <li>Drama</li>
+          <li>Fantasi Ilmiah & Fantasi</li>
+          <li>Kejahatan</li>
+          <li>KDrama</li>
+        </ul>
       </div>
-    </section>
+      <div class="genre-column">
+        <ul>
+          <li>Komedi</li>
+          <li>Petualangan</li>
+          <li>Perang</li>
+          <li>Romantis</li>
+        </ul>
+      </div>
+      <div class="genre-column">
+        <ul>
+          <li>Sains & Alam</li>
+          <li>Thriller</li>
+        </ul>
+      </div>
+    </div>
 
+    <!-- Bantuan -->
+    <div class="footer-help">
+      <h4>Bantuan</h4>
+      <ul>
+        <li>FAQ</li>
+        <li>Kontak Kami</li>
+        <li>Privasi</li>
+        <li>Syarat & Ketentuan</li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
 </body>
 </html>
 

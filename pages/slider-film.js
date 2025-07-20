@@ -4,28 +4,23 @@ const daftarFilm = [
     {
         judul: "Don't Look Up",
         rating: "4.5",
-        imgUrl: "../img/film.jpg"
+        imgUrl: "../img/lanjut-film/1.png"
     },
     {
         judul: "The Batman",
         rating: "4.2",
-        imgUrl: "../img/film.jpg"
+        imgUrl: "../img/lanjut-film/2.png"
     },
     {
         judul: "Blue Lock",
         rating: "4.6",
-        imgUrl: "../img/film.jpg"
+        imgUrl: "../img/lanjut-film/3.png"
     },
     {
         judul: "Blue Lock",
         rating: "4.6",
-        imgUrl: "../img/film.jpg"
+        imgUrl: "../img/lanjut-film/4.png"
     },
-    {
-        judul: "A Man Called Otto",
-        rating: "4.4",
-        imgUrl: "../img/film.jpg"
-    }
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -57,12 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Bagian untuk fungsionalitas slider ---
-    const carousels = document.querySelectorAll('.carousel');
+    const containers = document.querySelectorAll('.container');
 
-    carousels.forEach(carousel => {
-        const slider = carousel.querySelector('.film-slider');
-        const leftButton = carousel.querySelector('.nav-button.left');
-        const rightButton = carousel.querySelector('.nav-button.right');
+    containers.forEach(container => {
+        const slider = container.querySelector('.film-slider');
+        const leftButton = container.querySelector('.nav-button.left');
+        const rightButton = container.querySelector('.nav-button.right');
 
         if (!slider || !leftButton || !rightButton) return;
 
