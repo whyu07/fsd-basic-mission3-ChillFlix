@@ -7,7 +7,7 @@ const daftarFilm = [
         imgUrl: "../img/lanjut-film/1.png"
     },
     {
-        judul: "The Batman",
+        judul: "All of Us Are Dead",
         rating: "4.2",
         imgUrl: "../img/lanjut-film/2.png"
     },
@@ -17,8 +17,8 @@ const daftarFilm = [
         imgUrl: "../img/lanjut-film/3.png"
     },
     {
-        judul: "Blue Lock",
-        rating: "4.6",
+        judul: "A Man Called Otto",
+        rating: "4.4",
         imgUrl: "../img/lanjut-film/4.png"
     },
 ];
