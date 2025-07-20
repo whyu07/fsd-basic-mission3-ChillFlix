@@ -357,3 +357,88 @@ h2 {
 .footer-help a:hover {
     text-decoration: underline;
 }
+
+/* Terapkan gaya ini jika lebar layar 768px atau kurang (mencakup iPhone XR) */
+@media (max-width: 768px) {
+
+    /* --- Perbaikan Layout Umum --- */
+    .navbar, .hero, .container, .footer-container {
+        /* Ubah lebar tetap menjadi 100% agar fleksibel */
+        width: 100%;
+    }
+
+    /* --- Perbaikan Navbar --- */
+    .navbar {
+        padding: 15px 20px; /* Kurangi padding */
+        height: auto;
+    }
+    .nav-links {
+        /* Sembunyikan link di layar kecil (opsional, tapi umum dilakukan) */
+        /* Anda bisa menggantinya dengan menu hamburger */
+        display: none;
+    }
+    .nav-left {
+        gap: 12px;
+    }
+    
+    /* --- Perbaikan Hero Section --- */
+    .hero {
+        padding: 20px; /* Sesuaikan padding */
+        height: 400px; /* Kurangi tinggi hero */
+        margin-top: 70px; /* Sesuaikan dengan tinggi navbar baru */
+    }
+    .hero-title {
+        font-size: 2.5rem; /* Perkecil judul */
+    }
+    .hero-description {
+        font-size: 1rem; /* Perkecil deskripsi */
+        line-height: 1.4;
+        max-width: 90%; /* Pastikan teks tidak terlalu lebar */
+    }
+    .hero-buttons .btn {
+        padding: 10px 18px; /* Perkecil tombol */
+        font-size: 1rem;
+    }
+
+    /* --- Perbaikan Container & Slider --- */
+    .container {
+        padding: 20px 15px; /* Kurangi padding container */
+        gap: 20px;
+    }
+    .container-title {
+        font-size: 24px; /* Perkecil judul section */
+    }
+
+    /* Slider "Continue Watching" */
+    .film-slider {
+        gap: 15px;
+    }
+    .film-item {
+        width: 250px; /* Perkecil lebar kartu film agar pas */
+    }
+    
+    /* Swiper Slider */
+    .swiper {
+      height: auto; /* Biarkan tinggi slider menyesuaikan konten */
+    }
+    .swiper-slide {
+        height: 320px; /* Sesuaikan tinggi slide */
+    }
+    .swiper-slide img {
+        width: 210px; /* Sesuaikan ukuran gambar di dalam slide */
+        height: 100%;
+    }
+
+    /* --- Perbaikan Footer --- */
+    .footer-container {
+        flex-direction: column; /* Ubah flex menjadi vertikal */
+        align-items: center;   /* Pusatkan item */
+        text-align: center;
+        gap: 40px;
+    }
+    .footer-genre {
+        flex-direction: column; /* Genre juga dibuat vertikal */
+        gap: 25px;
+    }
+}
+
