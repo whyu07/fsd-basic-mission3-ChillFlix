@@ -4,195 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beranda - ChillFlix</title>
-    <link rel="shortcut icon" href="../img/mini-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/brand/logo-mini.png" type="image/x-icon">
     <link rel="stylesheet" href="../style/beranda.css">
 </head>
-<body class="body">
+<body class="page-home">
+    <header class="site-header">
+        <nav class="site-nav">
+            <div class="site-nav__left">
+                <a href="#" class="site-brand">
+                    <img src="../assets/images/brand/logo-chill.png" alt="ChillFlix Logo" class="site-brand__logo">
+                    <i class="fa-solid fa-clapperboard site-brand__icon" aria-hidden="true"></i>
+                </a>
+                <ul class="site-nav__links">
+                    <li><a href="#">Series</a></li>
+                    <li><a href="#">Film</a></li>
+                    <li><a href="#">Daftar Saya</a></li>
+                </ul>
+            </div>
+            <div class="site-nav__right">
+                <div class="profile-menu">
+                    <input type="checkbox" id="profile-toggle" class="profile-menu__toggle">
+                    <label for="profile-toggle" class="profile-menu__label">
+                        <img src="../assets/images/profiles/profile.png" alt="Profile" class="profile-menu__avatar">
+                        <i class="fa-solid fa-caret-down profile-menu__caret" aria-hidden="true"></i>
+                    </label>
+                    <div class="profile-menu__dropdown">
+                        <ul class="profile-menu__list">
+                            <li><a href="#" class="profile-menu__link"><i class="fa-solid fa-user"></i> Profil Saya</a></li>
+                            <li><a href="#" class="profile-menu__link"><i class="fa-solid fa-star"></i> Ubah Premium</a></li>
+                            <li><a href="../index.html" class="profile-menu__link"><i class="fa-solid fa-arrow-right-from-bracket"></i> Keluar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <nav class="navbar">
-        <div class="nav-left">
-            <a href="#" class="logo-link">
-                <img src="../img/logo-chill.png" alt="ChillFlix Logo">
-                <i class="fa-solid fa-clapperboard"></i>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#">Series</a></li>
-                <li><a href="#">Film</a></li>
-                <li><a href="#">Daftar Saya</a></li>
-            </ul>
+    <main class="page-content">
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Duty After School</h1>
+                <p class="hero__description">
+                    Sebuah benda tak dikenal mengambil alih dunia. Dalam keputusasaan, Departemen Pertahanan mulai merekrut lebih banyak tentara, termasuk siswa sekolah menengah. Mereka pun segera menjadi pejuang garis depan dalam perang.
+                </p>
+                <div class="hero__actions">
+                    <button class="btn btn--play"><i class="fas fa-play"></i> Mulai</button>
+                    <button class="btn btn--info"><i class="fas fa-info-circle"></i>Selengkapnya</button>
+                </div>
+            </div>
+            <div class="hero__fade"></div>
+        </section>
+
+        <section class="section section--continue" data-slider="continue">
+            <div class="section__header">
+                <h2 class="section__title">Continue Watching</h2>
+            </div>
+            <div class="slider">
+                <button class="slider__nav slider__nav--left" data-slider-prev aria-label="Sebelumnya">&#10094;</button>
+                <div class="slider__track" data-slider-track></div>
+                <button class="slider__nav slider__nav--right" data-slider-next aria-label="Berikutnya">&#10095;</button>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section__header">
+                <h2 class="section__title">Top Rating dan Series Hari Ini</h2>
+            </div>
+            <div class="carousel swiper js-carousel">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../assets/images/ratings/rating-1-suzume.png" alt="Suzume"></div>
+                    <div class="swiper-slide"><img src="../assets/images/ratings/rating-2.png" alt="Rating 2"></div>
+                    <div class="swiper-slide"><img src="../assets/images/ratings/rating-3.png" alt="Rating 3"></div>
+                    <div class="swiper-slide"><img src="../assets/images/ratings/rating-4.png" alt="Rating 4"></div>
+                    <div class="swiper-slide"><img src="../assets/images/ratings/rating-5.png" alt="Rating 5"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section__header">
+                <h2 class="section__title">Film Trending</h2>
+            </div>
+            <div class="carousel swiper js-carousel">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../assets/images/trending/trending-1.png" alt="Trending 1"></div>
+                    <div class="swiper-slide"><img src="../assets/images/trending/trending-2.png" alt="Trending 2"></div>
+                    <div class="swiper-slide"><img src="../assets/images/trending/trending-3.png" alt="Trending 3"></div>
+                    <div class="swiper-slide"><img src="../assets/images/trending/trending-4.png" alt="Trending 4"></div>
+                    <div class="swiper-slide"><img src="../assets/images/trending/trending-5.png" alt="Trending 5"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section__header">
+                <h2 class="section__title">Rilis Baru</h2>
+            </div>
+            <div class="carousel swiper js-carousel">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../assets/images/new-releases/new-1.png" alt="Rilis 1"></div>
+                    <div class="swiper-slide"><img src="../assets/images/new-releases/new-2.png" alt="Rilis 2"></div>
+                    <div class="swiper-slide"><img src="../assets/images/new-releases/new-3.png" alt="Rilis 3"></div>
+                    <div class="swiper-slide"><img src="../assets/images/new-releases/new-4.png" alt="Rilis 4"></div>
+                    <div class="swiper-slide"><img src="../assets/images/new-releases/new-5.png" alt="Rilis 5"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__container">
+            <div class="site-footer__brand">
+                <div class="site-footer__logo"><img src="../assets/images/brand/logo-chill.png" alt="ChillFlix"></div>
+                <p class="site-footer__copyright">©2023 Chill All Rights Reserved.</p>
+            </div>
+
+            <div class="site-footer__links">
+                <div class="site-footer__column">
+                    <h4>Genre</h4>
+                    <ul>
+                        <li><a href="#">Aksi</a></li>
+                        <li><a href="#">Anak-anak</a></li>
+                        <li><a href="#">Anime</a></li>
+                        <li><a href="#">Britania</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__column">
+                    <ul>
+                        <li><a href="#">Drama</a></li>
+                        <li><a href="#">Fantasi Ilmiah & Fantasi</a></li>
+                        <li><a href="#">Kejahatan</a></li>
+                        <li><a href="#">KDrama</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__column">
+                    <ul>
+                        <li><a href="#">Komedi</a></li>
+                        <li><a href="#">Petualangan</a></li>
+                        <li><a href="#">Perang</a></li>
+                        <li><a href="#">Romantis</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__column">
+                    <ul>
+                        <li><a href="#">Sains & Alam</a></li>
+                        <li><a href="#">Thriller</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="site-footer__help">
+                <h4>Bantuan</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Kontak Kami</a></li>
+                    <li><a href="#">Privasi</a></li>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="nav-right">
-    <div class="profile-container">
-        <input type="checkbox" id="profile-toggle" class="profile-toggle-checkbox">
-        
-        <label for="profile-toggle" class="profile-toggle-label">
-            <img src="../img/profile.png" alt="Profile" class="profile-pic">
-            <i class="fa-solid fa-caret-down arrow-icon"></i>
-        </label>
-        
-        <div class="dropdown-menu">
-            <ul>
-                <li><a href="#"><i class="fa-solid fa-user"></i> Profil Saya</a></li>
-                <li><a href="#"><i class="fa-solid fa-star"></i> Ubah Premium</a></li>
-                <li><a href="../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Keluar</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-    </nav>
-    <section class="hero">
-      <div class="hero-content">
-        <h1 class="hero-title">Duty After School</h1>
-        <p class="hero-description">
-          Sebuah benda tak dikenal mengambil alih dunia. Dalam keputusasaan, Departemen Pertahanan mulai merekrut lebih banyak tentara, termasuk siswa sekolah menengah. Mereka pun segera menjadi pejuang garis depan dalam perang.
-        </p>
-        <div class="hero-buttons">
-          <button class="btn btn-play"><i class="fas fa-play"></i> Mulai</button>
-          <button class="btn btn-info"><i class="fas fa-info-circle"></i>Selengkapnya</button>
-        </div>
-      </div>
-      <div class="hero-fade"></div>
-    </section>
+    </footer>
 
-    <section class="container">
-      <h2 class="container-title">Continue Watching</h2>
-    <div class="slider-container"> <!-- This container provides the custom slider's background and padding -->
-        <button class="nav-button left">&#10094;</button>
-        <div class="film-slider">
-            <!-- ISI Konten di isi dengan JS -->
-        </div>
-        <button class="nav-button right">&#10095;</button>
-    </section>
-
-    <section class="container">
-      <h2 class="container-title">Top Rating dan Series Hari Ini</h2>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="../img/rate1-suzume.png"></div>
-          <div class="swiper-slide"><img src="../img/rating/2.png"></div>
-          <div class="swiper-slide"><img src="../img/rating/3.png"></div>
-          <div class="swiper-slide"><img src="../img/rating/4.png"></div>
-          <div class="swiper-slide"><img src="../img/rating/5.png"></div>
-          
-       </div>
-       <div class="swiper-pagination"></div>
-      </div>
-    </section>
-
-    <section class="container">
-      <h2 class="container-title">Film Trending</h2>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="../img/trend/1.png"></div>
-          <div class="swiper-slide"><img src="../img/trend/2.png"></div>
-          <div class="swiper-slide"><img src="../img/trend/3.png"></div>
-          <div class="swiper-slide"><img src="../img/trend/4.png"></div>
-          <div class="swiper-slide"><img src="../img/trend/5.png"></div>
-          
-       </div>
-       <div class="swiper-pagination"></div>
-      </div>
-    </section>
-
-    <section class="container">
-      <h2 class="container-title">Rilis  Baru</h2>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="../img/rilis-new/1.png"></div>
-          <div class="swiper-slide"><img src="../img/rilis-new/2.png"></div>
-          <div class="swiper-slide"><img src="../img/rilis-new/3.png"></div>
-          <div class="swiper-slide"><img src="../img/rilis-new/4.png"></div>
-          <div class="swiper-slide"><img src="../img/rilis-new/5.png"></div>
-          
-          
-       </div>
-       <div class="swiper-pagination"></div>
-      </div>
-    </section>
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-    direction: "horizontal",
-    // Membuat slidesPerView menjadi responsif
-    slidesPerView: 1, // Default untuk layar paling kecil
-    spaceBetween: 10,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    // Breakpoints untuk layar yang lebih besar
-    breakpoints: {
-      // Jika lebar layar >= 600px
-      600: {
-        slidesPerView: 2,
-        spaceBetween: 15
-      },
-      // Jika lebar layar >= 1024px
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
-    }
-  });
-  </script>
-
-  <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-logo">
-      <div class="logo-icon"><img src="../img/logo-chill.png" alt=""></div>
-      <p class="copyright">©2023 Chill All Rights Reserved.</p>
-    </div>
-
-    <div class="footer-genre">
-      <div class="genre-column">
-        <h4>Genre</h4>
-        <ul>
-          <li><a href="#">Aksi</a></li>
-          <li><a href="#">Anak-anak</a></li>
-          <li><a href="#">Anime</a></li>
-          <li><a href="#">Britania</a></li>
-        </ul>
-      </div>
-      <div class="genre-column">
-        <ul>
-          <li><a href="#">Drama</a></li>
-          <li><a href="#">Fantasi Ilmiah & Fantasi</a></li>
-          <li><a href="#">Kejahatan</a></li>
-          <li><a href="#">KDrama</a></li>
-        </ul>
-      </div>
-      <div class="genre-column">
-        <ul>
-          <li><a href="#">Komedi</a></li>
-          <li><a href="#">Petualangan</a></li>
-          <li><a href="#">Perang</a></li>
-          <li><a href="#">Romantis</a></li>
-        </ul>
-      </div>
-      <div class="genre-column">
-        <ul>
-          <li><a href="#">Sains & Alam</a></li>
-          <li><a href="#">Thriller</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-help">
-      <h4>Bantuan</h4>
-      <ul>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Kontak Kami</a></li>
-        <li><a href="#">Privasi</a></li>
-        <li><a href="#">Syarat & Ketentuan</a></li>
-      </ul>
-    </div>
-
-  </div>
-</footer>
-<script src="../pages/slider-film.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../pages/slider-film.js" defer></script>
+    <script src="../pages/home.js" defer></script>
 </body>
 </html>

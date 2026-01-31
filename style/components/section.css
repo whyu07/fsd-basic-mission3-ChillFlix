@@ -1,0 +1,22 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 80px;
+    gap: 32px;
+}
+
+.section__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 110%;
+    text-align: left;
+}

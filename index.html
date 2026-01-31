@@ -4,44 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chill - Masuk</title>
-    <link rel="shortcut icon" href="./img/mini-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/brand/logo-mini.png" type="image/x-icon">
     <link rel="stylesheet" href="./style/auth.css">
 </head>
-<body class="body">
-    <main class="container">
-        <div class="header">
-            <img src="./img/mini-logo.png" alt="logo">
-            <img src="./img/logo.png" alt="logo">
-            <div class="h-tittle">
+<body class="page-auth page-auth--login">
+    <main class="auth-card">
+        <header class="auth-card__header">
+            <div class="brand">
+                <img src="./assets/images/brand/logo-mini.png" alt="ChillFlix" class="brand__icon">
+                <img src="./assets/images/brand/logo.png" alt="ChillFlix" class="brand__wordmark">
+            </div>
+            <div class="auth-card__title">
                 <h1>Masuk</h1>
                 <p>Selamat Datang Kembali</p>
             </div>
-        </div>
+        </header>
 
-        <form onsubmit="location.href='./pages/beranda.html'; return false;">
-            <div class="form-user">
+        <form class="auth-form" onsubmit="location.href='./pages/beranda.html'; return false;">
+            <div class="form-field">
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" placeholder="Masukkan username Anda" required>
             </div>
-            <div class="form-user">
+            <div class="form-field">
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" placeholder="Masukkan password Anda" required>
             </div>
-            <div class="form-daftar">
-                <p>Belum punya akun? <a href="./pages/register.html" id="register">Daftar</a></p>
-                <a href="#">Lupa kata sandi</a>
+            <div class="auth-form__links">
+                <p class="text-muted">Belum punya akun? <a href="./pages/register.html" class="link">Daftar</a></p>
+                <a href="#" class="link link--muted">Lupa kata sandi</a>
             </div>
-            <div class="form-action">
-                <button type="submit" class="btn" >Masuk</button>
-                <p>Atau</p>
-                <button>
-                    <img src="./img/google.png" alt="google-icon" id="google-icon">
-                     Masuk dengan Google
+            <div class="auth-form__actions">
+                <button type="submit" class="btn btn--primary">Masuk</button>
+                <span class="auth-form__divider">Atau</span>
+                <button type="button" class="btn btn--outline">
+                    <img src="./assets/images/ui/google.png" alt="Google" class="btn__icon">
+                    Masuk dengan Google
                 </button>
             </div>
-
         </form>
-
     </main>
 </body>
 </html>

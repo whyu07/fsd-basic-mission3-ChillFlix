@@ -1,72 +1,85 @@
-// Data film dalam bentuk array of objects.
-// Untuk menambah film, cukup tambahkan objek baru di sini!
-const daftarFilm = [
-    {
-        judul: "Don't Look Up",
-        rating: "4.5",
-        imgUrl: "../img/lanjut-film/1.png"
-    },
-    {
-        judul: "All of Us Are Dead",
-        rating: "4.2",
-        imgUrl: "../img/lanjut-film/2.png"
-    },
-    {
-        judul: "Blue Lock",
-        rating: "4.6",
-        imgUrl: "../img/lanjut-film/3.png"
-    },
-    {
-        judul: "A Man Called Otto",
-        rating: "4.4",
-        imgUrl: "../img/lanjut-film/4.png"
-    },
-];
+(() => {
+    const continueWatching = [
+        {
+            title: "Don't Look Up",
+            rating: '4.5',
+            image: '../assets/images/continue-watching/continue-1.png',
+        },
+        {
+            title: 'All of Us Are Dead',
+            rating: '4.2',
+            image: '../assets/images/continue-watching/continue-2.png',
+        },
+        {
+            title: 'Blue Lock',
+            rating: '4.6',
+            image: '../assets/images/continue-watching/continue-3.png',
+        },
+        {
+            title: 'A Man Called Otto',
+            rating: '4.4',
+            image: '../assets/images/continue-watching/continue-4.png',
+        },
+    ];
 
-document.addEventListener('DOMContentLoaded', () => {
-    // --- Bagian untuk mengisi konten dinamis ---
+    const sliderData = {
+        'continue': continueWatching,
+    };
 
-    // 1. Ambil elemen kontainer dari HTML
-    const container = document.querySelector('.film-slider');
-
-    // 2. Fungsi untuk membuat satu elemen film, disesuaikan dengan CSS
-    function buatKartuFilm(film) {
+    const createCard = (film) => {
         const item = document.createElement('div');
-        item.className = 'film-item';
-
+        item.className = 'slider-card';
         item.innerHTML = `
-            <img src="${film.imgUrl}" alt="${film.judul}">
-            <h3>${film.judul}</h3>
-            <p>${film.rating}/5</p>
+            <img src="${film.image}" alt="${film.title}" class="slider-card__image">
+            <h3 class="slider-card__title">${film.title}</h3>
+            <p class="slider-card__rating">${film.rating}/5</p>
         `;
         return item;
-    }
+    };
 
-    // 3. Loop melalui data dan tampilkan setiap film
-    if (container) {
-        container.innerHTML = ''; // Kosongkan kontainer sebelum mengisi
-        daftarFilm.forEach(film => {
-            const kartuFilm = buatKartuFilm(film);
-            container.appendChild(kartuFilm);
+    const renderCards = (track, films) => {
+        track.innerHTML = '';
+        films.forEach((film) => {
+            track.appendChild(createCard(film));
         });
-    }
+    };
 
-    // --- Bagian untuk fungsionalitas slider ---
-    const containers = document.querySelectorAll('.container');
+    const setupSliderControls = (root) => {
+        const track = root.querySelector('[data-slider-track]');
+        const prevButton = root.querySelector('[data-slider-prev]');
+        const nextButton = root.querySelector('[data-slider-next]');
 
-    containers.forEach(container => {
-        const slider = container.querySelector('.film-slider');
-        const leftButton = container.querySelector('.nav-button.left');
-        const rightButton = container.querySelector('.nav-button.right');
+        if (!track || !prevButton || !nextButton) {
+            return;
+        }
 
-        if (!slider || !leftButton || !rightButton) return;
-
-        rightButton.addEventListener('click', () => {
-            slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
+        nextButton.addEventListener('click', () => {
+            track.scrollBy({ left: track.clientWidth, behavior: 'smooth' });
         });
 
-        leftButton.addEventListener('click', () => {
-            slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' });
+        prevButton.addEventListener('click', () => {
+            track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' });
         });
-    });
-});
+    };
+
+    const initSliders = () => {
+        const sliderRoots = document.querySelectorAll('[data-slider]');
+        sliderRoots.forEach((sliderRoot) => {
+            const sliderKey = sliderRoot.dataset.slider;
+            const films = sliderData[sliderKey];
+            if (!films) {
+                return;
+            }
+
+            const track = sliderRoot.querySelector('[data-slider-track]');
+            if (!track) {
+                return;
+            }
+
+            renderCards(track, films);
+            setupSliderControls(sliderRoot);
+        });
+    };
+
+    document.addEventListener('DOMContentLoaded', initSliders);
+})();

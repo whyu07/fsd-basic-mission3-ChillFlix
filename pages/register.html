@@ -4,48 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar - ChillFlix</title>
-    <link rel="shortcut icon" href="../img/mini-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/brand/logo-mini.png" type="image/x-icon">
     <link rel="stylesheet" href="../style/auth.css">
 </head>
-<body class="body" id="register-body">
-    <main class="container">
-        <div class="header">
-            <img src="../img/mini-logo.png" alt="logo">
-            <img src="../img/logo.png" alt="logo">
-            <div class="h-tittle">
+<body class="page-auth page-auth--register">
+    <main class="auth-card">
+        <header class="auth-card__header">
+            <div class="brand">
+                <img src="../assets/images/brand/logo-mini.png" alt="ChillFlix" class="brand__icon">
+                <img src="../assets/images/brand/logo.png" alt="ChillFlix" class="brand__wordmark">
+            </div>
+            <div class="auth-card__title">
                 <h1>Daftar</h1>
                 <p>Selamat Datang!</p>
             </div>
-        </div>
-        
-        <form action="form-input" onsubmit="location.href='../index.html'; return false;">
-            <div class="form-user">
+        </header>
+
+        <form class="auth-form" onsubmit="location.href='../index.html'; return false;">
+            <div class="form-field">
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" placeholder="Masukkan username Anda" required>
             </div>
-            <div class="form-user">
+            <div class="form-field">
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" placeholder="Masukkan password Anda" required>
             </div>
-            <div class="form-user">
-                <label for="password">Confirm Password </label>
-                <input type="password" id="confirmation-pw" name="confirmation-pw" placeholder="Masukkan kembali password Anda" required>
+            <div class="form-field">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Masukkan kembali password Anda" required>
             </div>
-            <div class="form-daftar">
-                <p>Sudah punya akun? <a href="../index.html" id="register">Masuk</a></p>
-                <a href="#">Lupa kata sandi</a>
+            <div class="auth-form__links">
+                <p class="text-muted">Sudah punya akun? <a href="../index.html" class="link">Masuk</a></p>
+                <a href="#" class="link link--muted">Lupa kata sandi</a>
             </div>
-            <div class="form-action">
-                <button type="submit" class="btn">Daftar</button>
-                <p>Atau</p>
-                <button>
-                    <img src="../img/google.png" alt="google-icon" id="google-icon">
-                     Daftar dengan Google
+            <div class="auth-form__actions">
+                <button type="submit" class="btn btn--primary">Daftar</button>
+                <span class="auth-form__divider">Atau</span>
+                <button type="button" class="btn btn--outline">
+                    <img src="../assets/images/ui/google.png" alt="Google" class="btn__icon">
+                    Daftar dengan Google
                 </button>
             </div>
-
         </form>
-
     </main>
 </body>
 </html>
